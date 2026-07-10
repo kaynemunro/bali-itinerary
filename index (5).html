@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bali Family Itinerary · 13–22 July 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#1d2b28;
+    --sea:#0d7a73;
+    --sea-deep:#0a5751;
+    --sand:#f5efe2;
+    --sand-warm:#efe6d2;
+    --coral:#e3623b;
+    --sun:#f0a830;
+    --paper:#fbf8f1;
+    --line:#d9cdb6;
+    --muted:#6b7670;
+    --shadow:0 6px 24px rgba(29,43,40,.10);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:'Outfit',sans-serif;
+    color:var(--ink);
+    background:var(--paper);
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:920px;margin:0 auto;padding:0 20px}
+
+  /* ---------- HERO ---------- */
+  .hero{
+    position:relative;
+    min-height:340px;
+    display:flex;align-items:flex-end;
+    background:linear-gradient(180deg,rgba(10,87,81,.15),rgba(10,87,81,.78)),
+      url('https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=1600&q=80') center/cover;
+    color:#fff;
+    padding:40px 0;
+  }
+  .hero .wrap{width:100%}
+  .eyebrow{
+    font-size:.72rem;letter-spacing:.32em;text-transform:uppercase;
+    font-weight:600;opacity:.92;margin-bottom:14px;
+  }
+  .hero h1{
+    font-family:'Fraunces',serif;font-weight:600;
+    font-size:clamp(2.1rem,6vw,3.6rem);line-height:1.04;
+    letter-spacing:-.01em;text-shadow:0 2px 20px rgba(0,0,0,.25);
+  }
+  .hero .sub{margin-top:12px;font-size:1.04rem;opacity:.95;font-weight:300}
+  .hero .party{margin-top:6px;font-size:.92rem;opacity:.85}
+
+  /* ---------- KEY BAR ---------- */
+  .keybar{
+    background:var(--sea-deep);color:#fbf8f1;
+    font-size:.83rem;
+  }
+  .keybar .wrap{display:flex;flex-wrap:wrap;gap:8px 26px;padding:14px 20px;align-items:center}
+  .keybar b{font-weight:600;color:#fff}
+  .keybar .chip{display:inline-flex;align-items:center;gap:7px}
+  .keybar .dot{width:7px;height:7px;border-radius:50%;display:inline-block}
+
+  /* ---------- BOOKINGS STRIP ---------- */
+  .bookings{background:var(--sand);border-bottom:1px solid var(--line)}
+  .bookings .wrap{padding:18px 20px;display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px}
+  .bk{font-size:.8rem;line-height:1.4}
+  .bk .lab{font-weight:600;color:var(--sea-deep);display:block;font-size:.72rem;letter-spacing:.04em;text-transform:uppercase}
+  .bk .ref{color:var(--muted)}
+  .bk .addr{display:block;color:var(--ink);font-size:.74rem;margin-top:2px;opacity:.85}
+
+  /* ---------- INTRO NOTES ---------- */
+  .notes{padding:22px 0}
+  .notes .wrap{display:flex;flex-wrap:wrap;gap:14px}
+  .note{
+    flex:1 1 240px;background:#fff;border:1px solid var(--line);border-radius:14px;
+    padding:14px 16px;font-size:.86rem;box-shadow:var(--shadow)
+  }
+  .note h4{font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--sea);margin-bottom:5px}
+
+  /* ---------- DAY ---------- */
+  .day{padding:30px 0 8px;border-top:1px solid var(--line)}
+  .day:first-of-type{border-top:none}
+  .dayhead{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap;margin-bottom:4px}
+  .daynum{
+    font-family:'Fraunces',serif;font-weight:600;font-size:.78rem;letter-spacing:.06em;
+    color:#fff;background:var(--sea);border-radius:30px;padding:5px 13px;text-transform:uppercase;
+    white-space:nowrap
+  }
+  .day h2{
+    font-family:'Fraunces',serif;font-weight:600;font-size:clamp(1.3rem,3.4vw,1.7rem);
+    letter-spacing:-.01em;color:var(--ink)
+  }
+  .temp{font-size:.84rem;color:var(--muted);margin:2px 0 16px;font-weight:400}
+  .temp b{color:var(--coral);font-weight:600}
+
+  .photo{
+    width:100%;height:200px;object-fit:cover;border-radius:16px;margin-bottom:18px;
+    box-shadow:var(--shadow);display:block
+  }
+
+  .anchor{
+    background:var(--sand-warm);border-left:4px solid var(--sun);
+    padding:12px 16px;border-radius:0 12px 12px 0;margin-bottom:18px;font-size:.9rem
+  }
+  .anchor b{color:var(--sea-deep)}
+
+  /* timeline table */
+  table.tl{width:100%;border-collapse:collapse;margin-bottom:18px;font-size:.9rem}
+  table.tl td{padding:8px 10px;vertical-align:top;border-bottom:1px solid var(--line)}
+  table.tl td.t{
+    white-space:nowrap;font-weight:600;color:var(--sea-deep);width:130px;
+    font-variant-numeric:tabular-nums
+  }
+  table.tl tr:last-child td{border-bottom:none}
+  .hl td{background:#fff7e8}
+
+  .block{margin:14px 0}
+  .block h3{
+    font-size:.74rem;letter-spacing:.12em;text-transform:uppercase;color:var(--sea);
+    margin-bottom:8px;font-weight:700
+  }
+  ul.opts{list-style:none}
+  ul.opts li{
+    padding:7px 0 7px 22px;position:relative;font-size:.9rem;border-bottom:1px dotted var(--line)
+  }
+  ul.opts li:last-child{border-bottom:none}
+  ul.opts li::before{
+    content:"";position:absolute;left:4px;top:14px;width:7px;height:7px;border-radius:50%;
+    background:var(--sea)
+  }
+  .star::before{background:var(--sun)!important}
+  .fire::before{background:var(--coral)!important}
+  .tag{font-size:.64rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;
+    padding:2px 7px;border-radius:20px;vertical-align:middle;margin-right:6px}
+  .tag.s{background:#fcefcf;color:#9a6a00}
+  .tag.f{background:#fbe0d6;color:#b23c17}
+  .pick{font-style:italic;color:var(--coral);font-weight:500}
+  a{color:var(--sea-deep);text-decoration:none;border-bottom:1px solid rgba(13,122,115,.35);font-weight:500}
+  a:hover{border-bottom-color:var(--sea-deep)}
+
+  .book{
+    margin:14px 0 4px;background:#fff;border:1px dashed var(--sea);border-radius:12px;
+    padding:11px 15px;font-size:.85rem
+  }
+  .book b{color:var(--sea-deep)}
+  .book .ico{margin-right:6px}
+
+  .todo{
+    background:#fff;border:1px solid var(--line);border-left:4px solid var(--coral);
+    border-radius:0 12px 12px 0;padding:10px 15px;font-size:.86rem;margin:12px 0
+  }
+  .todo b{color:var(--coral)}
+
+  .placeholder{
+    background:repeating-linear-gradient(45deg,#f5efe2,#f5efe2 12px,#efe6d2 12px,#efe6d2 24px);
+    border:1px dashed var(--muted);border-radius:14px;padding:26px;text-align:center;
+    font-family:'Fraunces',serif;font-size:1.05rem;color:var(--muted);margin-bottom:10px
+  }
+
+  /* ---------- OPEN ITEMS ---------- */
+  .open{background:var(--sea-deep);color:#fbf8f1;margin-top:30px;padding:34px 0}
+  .open h2{font-family:'Fraunces',serif;font-weight:600;font-size:1.5rem;margin-bottom:6px;color:#fff}
+  .open .lead{font-size:.9rem;opacity:.85;margin-bottom:20px}
+  .open a{color:#9fe6df;border-bottom-color:rgba(159,230,223,.4)}
+  .band{margin-top:22px}
+  .band-h{display:flex;align-items:baseline;gap:10px;margin-bottom:10px;border-bottom:1px solid rgba(255,255,255,.2);padding-bottom:6px}
+  .band-h .ttl{font-family:'Fraunces',serif;font-weight:600;font-size:1.08rem;color:#fff}
+  .band-h .due{font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;background:var(--sun);color:#3a2a00;padding:3px 9px;border-radius:20px;font-weight:700}
+  .band-h .due.soon{background:var(--coral);color:#fff}
+  .band-h .due.chill{background:#7fb4ae;color:#06302c}
+  .chk{display:flex;align-items:flex-start;gap:10px;padding:7px 0;font-size:.9rem;border-bottom:1px solid rgba(255,255,255,.08)}
+  .chk:last-child{border-bottom:none}
+  .chk input{margin-top:3px;width:16px;height:16px;flex-shrink:0;accent-color:var(--sun);cursor:pointer}
+  .chk label{cursor:pointer;flex:1}
+  .chk.done2 label{opacity:.5;text-decoration:line-through}
+  .chk .mini{font-size:.78rem;opacity:.7;display:block;margin-top:1px}
+
+  footer{padding:24px 0 40px;text-align:center;font-size:.78rem;color:var(--muted)}
+
+  /* ---------- BOOK SECTION ---------- */
+  .booklist{background:var(--sand);border-top:1px solid var(--line);padding:34px 0}
+  .booklist h2{font-family:'Fraunces',serif;font-weight:600;font-size:1.5rem;margin-bottom:6px;color:var(--ink)}
+  .booklist .lead{font-size:.9rem;color:var(--muted);margin-bottom:20px}
+  .booklist h3{font-size:.74rem;letter-spacing:.12em;text-transform:uppercase;color:var(--sea);margin:18px 0 10px;font-weight:700}
+  .brow{display:grid;grid-template-columns:160px 1fr;gap:6px 16px;padding:10px 0;border-bottom:1px solid var(--line);font-size:.88rem;align-items:baseline}
+  .brow:last-child{border-bottom:none}
+  .brow .nm{font-weight:600;color:var(--ink)}
+  .brow .ct{color:var(--muted)}
+  .brow .ct a{word-break:break-word}
+  .brow .when{font-size:.74rem;color:var(--coral);font-weight:600;text-transform:uppercase;letter-spacing:.04em}
+  @media (max-width:560px){.brow{grid-template-columns:1fr}.brow .nm{margin-top:4px}}
+
+  @media (max-width:560px){
+    table.tl td.t{width:96px;font-size:.82rem}
+    .photo{height:150px}
+    .hero{min-height:280px}
+  }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="eyebrow">Family Holiday · Indonesia</div>
+    <h1>Bali, Hour by Hour</h1>
+    <div class="sub">Monday 13 – Wednesday 22 July 2026</div>
+    <div class="party">Kayne · Nicole · Lily (17) · Max (15) · Indie (9) — departing Westmere, Auckland</div>
+  </div>
+</header>
+
+<div class="keybar"><div class="wrap">
+  <span class="chip"><span class="dot" style="background:#f0a830"></span> <b>⭐ trusted staple</b></span>
+  <span class="chip"><span class="dot" style="background:#e3623b"></span> <b>🔥 newer / hyped 2026</b></span>
+  <span class="chip">💱 <b>Rupiah → NZD:</b> drop 4 zeros (Rp 500,000 ≈ NZ$47–50)</span>
+  <span class="chip">🌡️ <b>July:</b> dry season, ~27°C day / ~24°C night</span>
+</div></div>
+
+<div class="bookings"><div class="wrap">
+  <div class="bk"><span class="lab">Flights</span>NZ290 / NZ291 · <span class="ref">ref WRX44H</span></div>
+  <div class="bk"><span class="lab">AKL parking</span>Transport Hub (Valet) · <span class="ref">7GZYG · in Mon 13 7:45am / out Thu 23 6:30am</span></div>
+  <div class="bk"><span class="lab">Seminyak 13–17</span><a href="https://optimumbali.com/villa-bali/rental/4-bedrooms-for-rent/villa-zayya-seminyak-oberoi/" target="_blank">Villa Zayya</a> · <span class="ref">6994980430</span><span class="addr">Jl. Kayu Cendana, Gang 8A, Kerobokan Kelod, Seminyak, Kec. Kuta Utara, Kabupaten Badung, Bali 80361<br>📱 WhatsApp (Optimum Bali/Indri): +62 853 3800 2448 · on-site Mrs. Wayan: +62 852 3700 1112</span></div>
+  <div class="bk"><span class="lab">Lembongan 17–20</span><a href="https://www.morinresort.com/" target="_blank">Morin Resort</a> · <span class="ref">2 bungalows</span><span class="addr">Banjar Kangin, Jungut Batu, Lembongan, Kec. Nusa Penida, Kabupaten Klungkung, Bali 80771<br>📱 WhatsApp (preferred): +62 811 3800 8432</span></div>
+  <div class="bk"><span class="lab">Lembongan 20–22</span><a href="https://lembonganbeachclubandresort.com/" target="_blank">Lembongan Beach Club</a> · <span class="ref">5935014312</span><span class="addr">Jalan Jungut Batu Beach, Jungutbatu, Kec. Nusa Penida, Kabupaten Klungkung, Bali 80771<br>📱 WhatsApp: +62 811 397 1862 · reception: +62 821 4642 5043</span></div>
+  <div class="bk"><span class="lab">Wed 15 zoo</span>Bali Zoo breakfast (paid) · <span class="ref">6:30am pickup</span></div>
+  <div class="bk"><span class="lab">Wed 15 ATV/club</span>ATV 11am · Omma 1pm · <span class="ref">KQ654C</span></div>
+  <div class="bk"><span class="lab">Boat over 17</span>Kai Koa 12:30pm (paid) · <span class="ref">LJHF-080326</span></div>
+  <div class="bk"><span class="lab">Boat home 22</span>Rocky Fast Cruise · <span class="ref">RFC260311OAVP</span></div>
+</div></div>
+
+<div class="notes"><div class="wrap">
+  <div class="note"><h4>Packing for July</h4>Light clothing, reef-safe sunscreen, a hat, and one light layer for boats &amp; air-con. Short showers are possible but rarely last. <b>Pack seasickness pills</b> — take them 30–60 min before each boat crossing &amp; the snorkel day (they work preventively).</div>
+  <div class="note"><h4>Boats &amp; sea</h4>July is dry season — calmest seas of the year. Mornings are smoothest; afternoons pick up. Crossings: <a href="https://www.kaikoaindonesia.com/" target="_blank">Kai Koa</a> (17th, 12:30pm) · <a href="https://www.captainyinyang-lembongan.com/" target="_blank">Captain Yin Yang</a> snorkel (19th, 10am) · <a href="https://www.rockyfastcruise.com/" target="_blank">Rocky</a> home (22nd, 11am).</div>
+  <div class="note"><h4>The golden rule</h4>Build traffic buffers everywhere — especially the Bali airport run on the 22nd. We've padded every transfer.</div>
+  <div class="note"><h4>Island stay, sorted</h4>17–20 at <a href="https://www.morinresort.com/" target="_blank">Morin Resort</a>, then a short hop to <a href="https://lembonganbeachclubandresort.com/" target="_blank">Lembongan Beach Club</a> for 20–22 — both in Jungutbatu.</div>
+  <div class="note"><h4>Villa breakfast</h4><a href="https://optimumbali.com/villa-bali/rental/4-bedrooms-for-rent/villa-zayya-seminyak-oberoi/" target="_blank">Villa Zayya</a> breakfast isn't automatic — if you want to eat in, you must <b>pre-order with the villa</b> (usually the day before). Breakfast is already included at Morin &amp; Lembongan Beach Club. <span style="font-size:.78rem;color:var(--muted)">(<a href="https://www.booking.com/hotel/id/villa-zayya.html" target="_blank">Booking.com listing</a>)</span></div>
+  <div class="note"><h4>Airport &amp; transfers</h4>Pre-book every transfer: <b>DPS→Seminyak (13th)</b>, <b>Seminyak→Sanur (17th)</b>, and the <b>Sanur→DPS run home (22nd)</b>. Your <b>car's parked at AKL Valet (7GZYG)</b> for the 5:30am landing home — just collect &amp; drive.</div>
+</div></div>
+
+<main class="wrap">
+
+<!-- ============ MON 13 ============ -->
+<section class="day">
+  <div class="dayhead"><span class="daynum">Mon 13 Jul</span><h2>Auckland → Seminyak</h2></div>
+  <div class="temp">🌡️ Seminyak <b>~27°C</b> day / ~24°C night · arriving early evening, warm &amp; humid</div>
+  <img class="photo" src="https://images.unsplash.com/photo-1573790387438-4da905039392?w=1200&q=80" alt="Seminyak beach at sunset">
+  <table class="tl">
+    <tr><td class="t">6:00am NZT</td><td>Up, breakfast, final bag check at 99 Warlock St, Westmere</td></tr>
+    <tr><td class="t">7:00–7:15am</td><td>Leave home — Monday peak on SH16, allow 45–60 min</td></tr>
+    <tr class="hl"><td class="t">~7:45am</td><td>Park at <b>AKL Transport Hub — Valet</b> (booking 7GZYG, entry 7:45am), then walk to International Terminal</td></tr>
+    <tr><td class="t">~8:00am</td><td>At AKL International, ~3 hrs before departure</td></tr>
+    <tr><td class="t">11:10am</td><td><b>NZ290 departs</b></td></tr>
+    <tr class="hl"><td class="t">4:20pm Bali</td><td><b>Land Denpasar (DPS)</b> — Bali is 4 hrs behind NZ</td></tr>
+    <tr><td class="t">4:20–5:50pm</td><td>Immigration → bags → customs (~90 min peak-season buffer)</td></tr>
+    <tr><td class="t">~5:50pm</td><td>Meet DPS→Seminyak driver</td></tr>
+    <tr><td class="t">5:50–7:00pm</td><td>Drive to <a href="https://optimumbali.com/villa-bali/rental/4-bedrooms-for-rent/villa-zayya-seminyak-oberoi/" target="_blank">Villa Zayya</a> (45–75 min evening traffic)</td></tr>
+    <tr class="hl"><td class="t">~7:00pm</td><td><b>Check in, drop bags, freshen up</b></td></tr>
+    <tr class="hl"><td class="t">7:45pm</td><td><b>Dinner — Mama San (booked ✓)</b>, Jl. Raya Kerobokan</td></tr>
+  </table>
+  <div class="block">
+    <h3>Dinner — <span style="color:var(--coral)">Mama San booked ✓ 7:45pm</span> (the lower-key of your two)</h3>
+    <ul class="opts">
+      <li class="star"><span class="tag s">⭐ booked 7:45pm</span><a href="https://mamasanbali.com/" target="_blank">Mama San</a> — relaxed, buzzy modern-Asian; easier than a fine-dining room after the flight. <span class="pick">Confirmed — 7:45pm gives plenty of buffer after the 4:20pm landing &amp; airport/transfer time</span></li>
+      <li class="fire"><span class="tag f">🔥 backup</span><a href="https://www.instagram.com/milkandmadu/" target="_blank">Milk &amp; Madu</a> — if everyone's wiped, this is the easy walk-up option (garden + playground)</li>
+      <li><span class="tag s">⭐ backup</span>An Eat Street warung, or order in and crash. Legit after the flight</li>
+    </ul>
+  </div>
+  <div class="book"><span class="ico">📋</span><b>Book ahead:</b> <b>DPS→Seminyak private driver</b> — pre-book from NZ so someone's waiting at arrivals. If you want breakfast in the villa tomorrow, <b>pre-order it with Villa Zayya tonight</b>.</div>
+</section>
+
+<!-- ============ TUE 14 ============ -->
+<section class="day">
+  <div class="dayhead"><span class="daynum">Tue 14 Jul</span><h2>Seminyak ease-in + shopping 🛍️</h2></div>
+  <div class="temp">🌡️ <b>~27°C</b> day / ~24°C night · sunny, hot mid-afternoon</div>
+  <table class="tl">
+    <tr><td class="t">7:45–8:30am</td><td>Villa breakfast (pre-ordered)</td></tr>
+    <tr class="hl"><td class="t">8:45–9:45am</td><td><b>In-villa massages</b> — Kayne, Nicole &amp; Lily (60 min each), arranged through the villa manager</td></tr>
+    <tr><td class="t">9:45am–1:00pm</td><td>Take it easy — in and out of the villa pool; nip up and down Seminyak for a wander</td></tr>
+    <tr><td class="t">1:00–2:30pm</td><td>Lunch + heat-of-day pool</td></tr>
+    <tr class="hl"><td class="t">3:00–5:00pm</td><td><b>Shopping — Eat Street walk</b> (locked in)</td></tr>
+    <tr><td class="t">5:30pm</td><td>Freshen up at the villa</td></tr>
+    <tr class="hl"><td class="t">6:15pm</td><td><b>Dinner — Bambu (booked ✓)</b>, Jl. Petitenget</td></tr>
+  </table>
+  <div class="anchor"><b>Morning (locked):</b> no set activity — a proper ease-in after the travel day. Pool, rest, and a casual stroll through Seminyak as the mood takes you.</div>
+  <div class="anchor"><b>Shopping (locked):</b> <a href="https://www.google.com/maps/search/Jalan+Kayu+Aya+Seminyak" target="_blank">Jalan Kayu Aya — "Eat Street"</a>. A relaxed walk along Bali's best browsing strip, right by your villa. Rupiah for stalls, card for boutiques; Seminyak Village (air-con mall) and Seminyak Square markets are minutes away.</div>
+  <div class="block">
+    <h3>Lunch — <span style="color:var(--coral)">find somewhere while wandering ✓</span></h3>
+    <ul class="opts">
+      <li class="star"><span class="tag s">⭐ plan</span>Grab lunch wherever takes your fancy on the Seminyak walk — no fixed booking</li>
+      <li class="star"><span class="tag s">⭐ if you want a table</span><a href="https://www.sisterfieldsbali.com/" target="_blank">Sisterfields</a> — iconic family-friendly brunch in Seminyak Square; a real kids-and-all crowd-pleaser</li>
+      <li class="fire"><span class="tag f">🔥 if you want a table</span><a href="https://www.instagram.com/milkandmadu/" target="_blank">Milk &amp; Madu</a> — garden + playground, air-con; great with Indie</li>
+    </ul>
+    <p style="font-size:.82rem;color:var(--muted);margin-top:6px"><b>Need to book?</b> Both take walk-ins. At peak (12–1:30pm) the wait can be 20–40 min — go a little early/late and you'll likely walk straight in, or message ahead the same morning if you want a guaranteed noon table.</p>
+  </div>
+  <div class="block">
+    <h3>Dinner — <span style="color:var(--coral)">Bambu booked ✓ 6:15pm</span></h3>
+    <ul class="opts">
+      <li class="star"><span class="tag s">⭐ booked 6:15pm</span><a href="https://bambubali.com/" target="_blank">Bambu</a> — lotus ponds &amp; candlelit pavilions, resurrected Indonesian recipes (betutu duck, soft-shell crab, baby back ribs); from the La Lucciola team. <span class="pick">Confirmed — Jl. Petitenget</span></li>
+      <li class="star"><span class="tag s">⭐ alt</span><a href="https://www.merahputih-bali.com/" target="_blank">Mérah Putih</a> — cathedral-like architecture, refined modern Indonesian</li>
+      <li class="fire"><span class="tag f">🔥 alt</span><a href="https://www.instagram.com/barabistrobali/" target="_blank">BARA Bistro</a> — smoke-and-soul Indonesian + 11-course family-style tasting menu</li>
+    </ul>
+  </div>
+  <div class="book"><span class="ico">📋</span><b>Book ahead:</b> Pre-order tonight's-before villa breakfast (~7:45am); massages arranged with the manager (Tue ~8:45am, 3 × 60 min — Kayne, Nicole, Lily). Bambu &amp; Mama San already booked.</div>
+</section>
+
+<!-- ============ WED 15 ============ -->
+<section class="day">
+  <div class="dayhead"><span class="daynum">Wed 15 Jul</span><h2>Zoo breakfast + ATV adventure + pool club ⭐</h2></div>
+  <div class="temp">🌡️ Ubud/Gianyar <b>~27°C</b> day, cooler under canopy; nights ~22°C inland</div>
+  <img class="photo" src="https://images.unsplash.com/photo-1531592937781-344ad608fabf?w=1200&q=80" alt="Tegalalang rice terraces, Bali">
+  <div class="anchor"><b>Locked &amp; paid ✓:</b> <a href="https://bali-zoo.com/package/breakfast-with-orangutan/" target="_blank">Breakfast with Orangutan at Bali Zoo</a> (4 adults + Indie) — <b>6:30am pickup &amp; drop-off from Villa Zayya included</b>. Then <b><a href="https://atvubudadventure.com/" target="_blank">ATV Ubud Adventure</a> at 11am</b> (same Singapadu area as the zoo) + <b><a href="https://ommabali.com/" target="_blank">Omma Day Club</a> at 1pm</b> (2 daybeds, ref KQ654C) for pool &amp; lunch over Tegenungan Waterfall.</div>
+  <table class="tl">
+    <tr><td class="t">6:00am</td><td>Wake — the buffet <i>is</i> breakfast</td></tr>
+    <tr class="hl"><td class="t">6:30am</td><td><b>Bali Zoo pickup from Villa Zayya</b> (confirmed — pickup &amp; drop-off included in the booking)</td></tr>
+    <tr><td class="t">~8:00am</td><td>Breakfast — elephants feed, orangutans swing in; birds, gibbon, pangolin</td></tr>
+    <tr><td class="t">~9:30–9:45am</td><td>Finish breakfast, then the zoo driver takes you straight to the ATV base (same Singapadu area — only a few minutes away, <b>not</b> back to the villa)</td></tr>
+    <tr class="hl"><td class="t">11:00am</td><td><b><a href="https://atvubudadventure.com/" target="_blank">ATV Ubud Adventure</a> — booked ✓</b> (3 single + 1 tandem, 5 people). <b>Rice paddies</b>, jungle trails, rivers, tunnels &amp; hidden waterfalls (~1.5 hrs)</td></tr>
+    <tr><td class="t">~12:30pm</td><td>Ride ends, clean up at the ATV base showers — don't dawdle, the daybed's booked for 1pm</td></tr>
+    <tr class="hl"><td class="t">1:00pm</td><td><a href="https://ommabali.com/" target="_blank">Omma Day Club</a> — <b>booked ✓ (2 daybeds, ref KQ654C)</b>; infinity pool over Tegenungan Waterfall, swim, lounge, lunch, lift down to the falls</td></tr>
+    <tr><td class="t">~4:00pm</td><td>Drive back to Seminyak</td></tr>
+    <tr><td class="t">~6:00–7:00pm</td><td>Optional in-villa massage if you've energy (Kayne, Nicole, Lily &amp; Indie, ~1hr) before dinner</td></tr>
+    <tr><td class="t">7:30pm</td><td>Dinner</td></tr>
+  </table>
+  <div class="block">
+    <h3>Adventure — <span style="color:var(--coral)">ATV Ubud Adventure booked ✓ 11:00am</span></h3>
+    <ul class="opts">
+      <li class="star"><span class="tag s">⭐ booked 11am</span><a href="https://atvubudadventure.com/" target="_blank">ATV Ubud Adventure</a> — 5 people: <b>3 single + 1 tandem</b> (Indie rides tandem with a parent). ~1.5 hrs through rice paddies, jungle, rivers, tunnels &amp; hidden waterfalls. <span class="pick">Confirmed via WhatsApp</span></li>
+    </ul>
+    <p style="font-size:.86rem;margin-top:8px"><b>📍 Address for the zoo driver:</b> ATV Ubud Adventure, Jl. Raya Singapadu No.10, Singapadu Kaler, Kec. Sukawati, Gianyar. <b>WhatsApp +62 878-7706-6948</b>. <a href="https://atvubudadventure.com/" target="_blank">atvubudadventure.com</a></p>
+    <p style="font-size:.82rem;color:var(--muted);margin-top:6px"><b>Good to know:</b> the ATV base is in <b>Singapadu — the same area as Bali Zoo</b>, only a few minutes away, so the zoo driver can drop you straight there. Automatic quads, full safety gear, guide &amp; insurance included; showers, towels &amp; lockers for the mud. Tell the zoo driver on the morning to take you to the ATV base, not back to the villa.</p>
+  </div>
+  <div class="block">
+    <h3>Lunch &amp; pool — <span style="color:var(--coral)">Omma Day Club booked ✓ 1:00pm</span></h3>
+    <ul class="opts">
+      <li class="star"><span class="tag s">⭐ booked 1pm</span><a href="https://ommabali.com/" target="_blank">Omma Day Club</a> — infinity pool set right over Tegenungan Waterfall, with a private lift down to the falls; comfort food (wood-fired pizzas, sharing platters), lively DJ. <span class="pick">2 daybeds side by side (for all 5) · ref KQ654C</span></li>
+    </ul>
+    <p style="font-size:.82rem;color:var(--muted);margin-top:6px"><b>Booked:</b> 2 daybeds, 1:00pm, Wed 15 Jul, ref <b>KQ654C</b> (accepted). Each daybed seats up to 4, so two together fits all five comfortably. Entry fee + daybed minimum spend applies. Kids can swim but must be supervised — no lifeguard. Arrive close to 1pm — the ATV finishes ~12:30 then it's a 30–40 min drive over.</p>
+  </div>
+  <div class="block">
+    <h3>Pool-lunch alternatives (if you'd rather)</h3>
+    <ul class="opts">
+      <li><span class="tag f">🔥 calmer</span><a href="https://www.tujuubud.com/" target="_blank">TUJU Tropic Club</a> — two-level jungle infinity pool + quieter "Nest" pool, standout food, no minimum; ~15 min into central Ubud, calmer vibe</li>
+      <li><span class="tag s">⭐ easy</span><a href="https://tisrestaurant.com/" target="_blank">TIS Café</a> — two-level pool &amp; swing over the Tegalalang rice terraces; free entry, walk-ins, kid-friendly</li>
+      <li><a href="https://cretyaubud.com/" target="_blank">Cretya Ubud (Alas Harum)</a> — tiered pools + swings &amp; ziplines on site (check pool age policy) · <a href="https://www.instagram.com/dtukadriverclub/" target="_blank">D'Tukad River Club</a></li>
+    </ul>
+  </div>
+  <div class="block">
+    <h3>Dinner — back in Seminyak</h3>
+    <ul class="opts">
+      <li class="star"><span class="tag s">⭐</span><a href="https://thelongtablebali.com/" target="_blank">The Long Table at John Hardy</a> — open-air communal Balinese feast, family-style</li>
+      <li class="fire"><span class="tag f">🔥</span><a href="https://www.instagram.com/barabistrobali/" target="_blank">BARA Bistro</a> — smoke-and-soul Indonesian + 11-course family-style tasting menu</li>
+      <li class="star"><span class="tag s">⭐</span>Easy option — a warung near the villa after a big day</li>
+    </ul>
+  </div>
+  <div class="book"><span class="ico">📋</span><b>All booked ✓:</b> Zoo breakfast (6:30am pickup), <a href="https://atvubudadventure.com/" target="_blank">ATV Ubud Adventure</a> (11am), <a href="https://ommabali.com/" target="_blank">Omma Day Club</a> (1pm, 2 daybeds, ref KQ654C). <b>To arrange:</b> a private driver for after the zoo — ATV base → Omma → back to Seminyak (book via the villa a day or two ahead). On the morning, ask the zoo driver to drop you at the ATV base (Jl. Raya Singapadu No.10), not back at the villa. <span style="color:var(--muted)">No villa breakfast — the zoo buffet is breakfast.</span></div>
+</section>
+
+<!-- ============ THU 16 ============ -->
+<section class="day">
+  <div class="dayhead"><span class="daynum">Thu 16 Jul</span><h2>Waterbom day</h2></div>
+  <div class="temp">🌡️ Kuta <b>~27–28°C</b> day / ~25°C night · full sun — hats, reef-safe sunscreen, rashies</div>
+  <img class="photo" src="https://images.unsplash.com/photo-1601000937967-3d4d4b1b3d1e?w=1200&q=80" alt="Water park slides" onerror="this.src='https://images.unsplash.com/photo-1521587760476-6c12a4b040da?w=1200&q=80'">
+  <table class="tl">
+    <tr><td class="t">8:00am</td><td>Grab breakfast out / on the way (no villa breakfast today), sunscreen, swim gear</td></tr>
+    <tr><td class="t">8:30am</td><td>Ride to <a href="https://waterbom-bali.com/" target="_blank">Waterbom</a> (Kuta, ~30–45 min)</td></tr>
+    <tr class="hl"><td class="t">9:00am</td><td><b>Gates open</b> — cooler, emptier slides</td></tr>
+    <tr><td class="t">9:00am–4:00pm</td><td>Park day from reserved gazebo</td></tr>
+    <tr><td class="t">~4:30pm</td><td>Back to villa, rinse, recover</td></tr>
+    <tr><td class="t">5:00–6:00pm</td><td>Optional in-villa massage (2nd session — Kayne, Nicole, Lily &amp; Indie, ~1hr) if not water-tired</td></tr>
+    <tr><td class="t">7:00pm</td><td>Dinner</td></tr>
+  </table>
+  <div class="todo"><b>⚠️ Still to sort — gazebo booking:</b> online slots showing sold out. Try emailing/WhatsApping <a href="https://waterbom-bali.com/" target="_blank">Waterbom</a> reservations directly, ask about higher gazebo tiers, have the villa host call, cross-check <a href="https://www.klook.com/en-US/activity/1736-waterbom-bali-kuta/" target="_blank">Klook</a> / <a href="https://www.getyourguide.com/" target="_blank">GetYourGuide</a>, watch for cancellations ~7–14 days out, or swap to the 14th/15th. (A gazebo's a comfort, not essential.)</div>
+  <div class="block">
+    <h3>Lunch</h3>
+    <ul class="opts"><li>Inside the park — multiple outlets, no booking needed</li></ul>
+  </div>
+  <div class="block">
+    <h3>Dinner — make tonight a great one (open — your pick)</h3>
+    <ul class="opts">
+      <li class="star"><span class="tag s">⭐</span><a href="https://www.lalucciola-bali.com/" target="_blank">La Lucciola</a> — beachfront on the sand, sunset</li>
+      <li class="star"><span class="tag s">⭐</span><a href="https://www.google.com/maps/search/Menega+Cafe+Jimbaran" target="_blank">Jimbaran Bay seafood</a> (e.g. Menega) — grilled seafood, feet in the sand, short drive</li>
+      <li class="star"><span class="tag s">⭐</span><a href="https://www.tuguhotels.com/hotels/bali/hotel-tugu-bali/dine/" target="_blank">Ji at Hotel Tugu</a> — antique-filled, candle-lit beachfront on Batu Belig; unforgettable</li>
+      <li class="fire"><span class="tag f">🔥</span><a href="https://nuidamano.com/" target="_blank">Nui da Mano</a> — newest Seminyak beachfront, sharing plates, sunset</li>
+      <li class="fire"><span class="tag f">🔥</span><a href="https://www.manobali.com/" target="_blank">Mano Beach House</a> — Petitenget beachfront, fairy-lights, sunset cocktails &amp; seafood</li>
+    </ul>
+  </div>
+  <div class="book"><span class="ico">📋</span><b>Book ahead:</b> Waterbom tickets + gazebo (chase per above); dinner 2–4 wks ahead. <span style="color:var(--muted)">Grab a quick bite before the park (no villa breakfast this morning); Beachwalk Mall is next door for an hour of shopping if anyone's done with slides.</span></div>
+</section>
+
+<!-- ============ FRI 17 ============ -->
+<section class="day">
+  <div class="dayhead"><span class="daynum">Fri 17 Jul</span><h2>Seminyak → Nusa Lembongan · Morin Resort</h2></div>
+  <div class="temp">🌡️ <b>~27°C</b> day / ~24°C night · calm morning seas typical; sea ~27°C</div>
+  <img class="photo" src="https://images.unsplash.com/photo-1518002171953-a080ee817e1f?w=1200&q=80" alt="Nusa Lembongan coastline">
+  <table class="tl">
+    <tr><td class="t">8:00–9:30am</td><td>Relaxed villa breakfast (pre-ordered), final pack — no rush this morning</td></tr>
+    <tr><td class="t">~10:15am</td><td>Settle any villa bill; leave Villa Zayya (checkout is noon, but you'll be gone before then)</td></tr>
+    <tr><td class="t">10:15–11:30am</td><td>Drive Seminyak → Sanur (45–75 min in traffic — the buffer covers a bad run)</td></tr>
+    <tr class="hl"><td class="t">~11:30am</td><td>Check in at the <a href="https://www.kaikoaindonesia.com/" target="_blank">Kai Koa</a> office, Jl. Pantai Matahari Terbit, Sanur (be there ~1 hr before departure)</td></tr>
+    <tr class="hl"><td class="t">12:30pm</td><td><b>Kai Koa fast boat departs Sanur → Lembongan</b> (5 seats, paid · order LJHF-080326) · 💊 seasickness pills before boarding</td></tr>
+    <tr><td class="t">~1:10pm</td><td>Arrive Lembongan (~35–40 min crossing)</td></tr>
+    <tr class="hl"><td class="t">2:00–6:00pm</td><td><b>Check in at <a href="https://www.morinresort.com/" target="_blank">Morin Resort</a>, Jungutbatu</b> — 2 bungalows (One-Bedroom Ocean Suite w/ Pool View + Ocean Suite), breakfast incl. Sort island wheels</td></tr>
+  </table>
+  <p style="font-size:.84rem;color:var(--muted);margin-bottom:14px">Lunch tip: grab a bite in Sanur near the boat office before the 12:30 departure, or wait and eat beachfront on arrival in Jungutbatu (~1:30pm).</p>
+  <div class="block">
+    <h3>Dinner</h3>
+    <ul class="opts">
+      <li class="star"><span class="tag s">⭐</span><a href="https://www.instagram.com/thaipantrylembongan/" target="_blank">Thai Pantry</a> — famous VW-van Thai on the waterfront (book ahead)</li>
+      <li class="star"><span class="tag s">⭐</span><a href="https://www.ohanaslembongan.com/" target="_blank">Ohana's "Sunsets on Fire"</a> — beach bonfire, music, wood-fired pizzas</li>
+      <li class="star"><span class="tag s">⭐</span><a href="https://www.google.com/maps/search/Hai+Ri+Zen+Lembongan" target="_blank">Hai Ri Zen</a> — bamboo architecture on the beach, sunset</li>
+    </ul>
+    <p style="font-size:.82rem;color:var(--muted);margin-top:6px">Island note: Lembongan doesn't churn trendy openings like Seminyak — these genuinely are the best spots.</p>
+  </div>
+  <div class="book"><span class="ico">📋</span><b>Book ahead:</b> Pre-order your last villa breakfast; pre-book the <b>Seminyak→Sanur driver</b> for ~10:15am (boat office check-in by 11:30am); <b>tell Morin your arrival time</b> (~1:30pm, check-in 2–6pm); on arrival, book golf cart/scooters.</div>
+</section>
+
+<!-- ============ SAT 18 ============ -->
+<section class="day">
+  <div class="dayhead"><span class="daynum">Sat 18 Jul</span><h2>Island explorer day</h2></div>
+  <div class="temp">🌡️ <b>~27–28°C</b> day / ~24°C night · sunny, sea breeze on the cliffs</div>
+  <table class="tl">
+    <tr><td class="t">8:30am</td><td>Breakfast at Morin (included)</td></tr>
+    <tr><td class="t">9:30am–1:00pm</td><td>Cart loop / activity</td></tr>
+    <tr><td class="t">1:00pm</td><td>Beachside lunch</td></tr>
+    <tr><td class="t">Afternoon</td><td>Beach / cross to Ceningan</td></tr>
+    <tr><td class="t">Sunset</td><td>Drinks + dinner</td></tr>
+  </table>
+  <div class="block">
+    <h3>⚠️ Adventure / active — pick</h3>
+    <ul class="opts">
+      <li>Cart loop — <a href="https://www.google.com/maps/search/Devil's+Tear+Nusa+Lembongan" target="_blank">Devil's Tear</a> → Dream Beach → Sandy Bay</li>
+      <li><a href="https://www.google.com/maps/search/Yellow+Bridge+Nusa+Ceningan" target="_blank">Yellow Bridge</a> to Ceningan — Blue Lagoon + <a href="https://www.google.com/maps/search/Mahana+Point+Nusa+Ceningan" target="_blank">Mahana Point</a> cliff jumps (5m &amp; 10m)</li>
+      <li>Surf at Playgrounds (beginner/intermediate)</li>
+    </ul>
+  </div>
+  <div class="block">
+    <h3>Chill</h3>
+    <ul class="opts">
+      <li>Secret Beach or Song Lambung — quieter, crowd-free</li>
+      <li>Le Pirate Beach Club on Ceningan · sunset massage</li>
+    </ul>
+  </div>
+  <div class="block">
+    <h3>Lunch &amp; Dinner</h3>
+    <ul class="opts">
+      <li class="star"><span class="tag s">⭐ lunch</span><a href="https://www.sandybaylembongan.com/" target="_blank">Sandy Bay Beach Club</a> — quiet-beach setting, great for a long mid-loop lunch</li>
+      <li class="star"><span class="tag s">⭐ lunch</span>Dream Beach café — toes-in-sand, dramatic views</li>
+      <li class="star"><span class="tag s">⭐ dinner</span><a href="https://www.google.com/maps/search/Lemongrass+Lembongan" target="_blank">Lemongrass</a> — beachfront, live music</li>
+      <li class="star"><span class="tag s">⭐ dinner</span><a href="https://www.google.com/maps/search/Mahana+Point+Nusa+Ceningan" target="_blank">Mahana Point</a> — sunset beers after the cliff jumps</li>
+      <li class="star"><span class="tag s">⭐ dinner</span><a href="https://www.thedecklembongan.com/" target="_blank">The Deck</a> — over-water tables, great cocktails</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============ SUN 19 ============ -->
+<section class="day">
+  <div class="dayhead"><span class="daynum">Sun 19 Jul</span><h2>Turtle &amp; reef snorkel day ⭐</h2></div>
+  <div class="temp">🌡️ Island <b>~27–28°C</b> day / ~24°C night · sea ~27°C · mornings calmest &amp; clearest</div>
+  <img class="photo" src="https://images.unsplash.com/photo-1518877593221-1f28583780b4?w=1200&q=80" alt="Sea turtle in clear water">
+  <div class="anchor">The turtle &amp; coral bays are the reliable, family-friendly highlight; Manta Point is an optional bonus you can add on the day (extra ~1 hr) only if the sea's calm.</div>
+  <table class="tl">
+    <tr><td class="t">8:00am</td><td>Breakfast at Morin (included)</td></tr>
+    <tr><td class="t">~9:40am</td><td>💊 Seasickness pills; get to Coconut Beach for pickup</td></tr>
+    <tr class="hl"><td class="t">10:00am</td><td><b>Captain Yin Yang private charter departs</b> — 3-stop snorkel, up to 3 hrs</td></tr>
+    <tr><td class="t">10:00am–1:00pm</td><td>Snorkel the calm bays — turtles, coral gardens, tropical fish (GoPro photos sent that evening)</td></tr>
+    <tr><td class="t">Afternoon</td><td>Chill / massage back at Morin</td></tr>
+    <tr><td class="t">7:00pm</td><td>Dinner</td></tr>
+  </table>
+  <div class="block">
+    <h3>Snorkel — <span style="color:var(--coral)">Captain Yin Yang booked ✓ 10:00am</span></h3>
+    <ul class="opts">
+      <li class="star"><span class="tag s">⭐ booked 10am</span><b><a href="https://www.captainyinyang-lembongan.com/" target="_blank">Captain Yin Yang</a></b> — private family charter, 5 pax, 2.2M IDR (~NZ$215). 3 points up to 3 hrs; high-quality gear incl. life vests, English-speaking guides <b>in the water</b>, modern speedboat, water &amp; snacks, free GoPro photos/videos sent that evening. <span class="pick">Confirmed via WhatsApp — ideal for Indie (9)</span></li>
+    </ul>
+    <p style="font-size:.82rem;color:var(--muted);margin-top:6px"><b>Spots:</b> calm/sheltered priority — Crystal Bay, Mangrove Point + a gentle third (Gamat Bay); Manta Bay/Point only as an optional ~1 hr extension if the sea's calm on the day. If big swells, they'll swap to alternate sheltered sites. <b>WhatsApp: +62 813 5335 5215</b> (Captain Komang). Departs Coconut/Song Lambung Beach, Jungutbatu — confirm pickup from Morin. <b>Backups:</b> <a href="https://www.aquamansnorkelinglembongan.com/" target="_blank">Aquaman</a> (Captain Made) · <a href="https://lembongansnorkelingtrips.com/" target="_blank">Lembongan Snorkeling Trips</a>.</p>
+  </div>
+  <div class="block">
+    <h3>Dinner</h3>
+    <ul class="opts">
+      <li class="star"><span class="tag s">⭐</span><a href="https://www.thedecklembongan.com/" target="_blank">The Deck</a> — perched over the water, sunset cocktails</li>
+      <li class="star"><span class="tag s">⭐</span><a href="https://www.google.com/maps/search/Hai+Ri+Zen+Lembongan" target="_blank">Hai Ri Zen</a> — bamboo, beachfront</li>
+      <li class="star"><span class="tag s">⭐</span><a href="https://www.instagram.com/thaipantrylembongan/" target="_blank">Thai Pantry</a> — best pad thai on the island</li>
+    </ul>
+  </div>
+  <div class="book"><span class="ico">📋</span><b>Booked ✓:</b> <a href="https://www.captainyinyang-lembongan.com/" target="_blank">Captain Yin Yang</a> private charter, Sun 19 · 10am, 5 pax, 2.2M IDR (WhatsApp +62 813 5335 5215). <b>To confirm:</b> pickup from Morin + any deposit. Dinner day-of.</div>
+</section>
+
+<!-- ============ MON 20 ============ -->
+<section class="day">
+  <div class="dayhead"><span class="daynum">Mon 20 Jul</span><h2>Morin Resort → Lembongan Beach Club</h2></div>
+  <div class="temp">🌡️ <b>~27–28°C</b> day / ~24°C night</div>
+  <table class="tl">
+    <tr><td class="t">8:00–10:00am</td><td>Breakfast, <b>check out of Morin Resort</b> (checkout 8–10am)</td></tr>
+    <tr><td class="t">Daytime</td><td><i>(your plan)</i></td></tr>
+    <tr><td class="t">Midday</td><td>Lunch on the island before checking in</td></tr>
+    <tr class="hl"><td class="t">~2:30pm</td><td>Short hop across Jungutbatu to <a href="https://lembonganbeachclubandresort.com/" target="_blank">Lembongan Beach Club</a> (check-in 3pm)</td></tr>
+    <tr><td class="t">Evening</td><td><i>(your plan — see below)</i></td></tr>
+  </table>
+  <div id="bdayGate" style="margin-bottom:14px;border:1px solid var(--line);border-radius:12px;overflow:hidden">
+    <div style="padding:12px 16px;background:var(--sand-warm);font-weight:600;color:var(--sea-deep)">🎁 Kayne's eyes only — PIN required</div>
+    <div id="bdayLock" style="padding:14px 16px;background:#fff">
+      <p style="font-size:.86rem;margin-bottom:10px;color:var(--muted)">Enter PIN to view.</p>
+      <input id="bdayPin" type="password" inputmode="numeric" maxlength="8" placeholder="PIN" style="padding:8px 10px;border:1px solid var(--line);border-radius:8px;font-size:1rem;width:120px" />
+      <button id="bdayBtn" style="padding:8px 14px;margin-left:8px;border:none;border-radius:8px;background:var(--sea-deep);color:#fff;font-weight:600;cursor:pointer">Unlock</button>
+      <span id="bdayErr" style="margin-left:10px;color:var(--coral);font-size:.82rem"></span>
+    </div>
+    <div id="bdayContent" style="display:none;padding:14px 16px;font-size:.88rem;background:#fff">
+      <p style="margin-bottom:10px"><b>Nicole's birthday 🎂</b> — kept hidden here so it stays a surprise.</p>
+      <p style="margin-bottom:8px"><b>Morning spa — <a href="https://www.springspa.com/locations/bali/nusa-lembongan" target="_blank">Spring Spa</a> for Nicole &amp; Lily (booked ✓).</b> <b>10:00am, 2× "The Spring Reset" 90 min</b>, 2 female therapists, same room. Arrive 9:50am (10 min early for consultation). Buggy pickup from Morin ~9:40. While they're pampered, you + Max + Indie pack up and move everything to Lembongan Beach Club. Spring Spa: +62 811 399 1775. <span style="color:var(--muted)">A few minutes from Morin (same Jungutbatu beach stretch, by The Deck / Batu Karang). 50% deposit paid (non-refundable). Note: some construction noise possible nearby.</span></p>
+      <p style="margin-bottom:8px"><b>Lunch — <a href="https://indiana-kenanga-villas.com/restaurant/" target="_blank">Indiana Kenanga</a> · booked ✓ 1:30pm.</b> Island's most elegant, French-Balinese (Chef Tamas), white linens, feet in the sand. <b>Ask for a table right on the sand with the beach/sunset view</b> — guests have been wrongly seated at the back despite confirming, so confirm "front, ocean-view table" in writing. 1:30pm gives a relaxed buffer after the spa (out ~11:45) — no rush on her birthday. Book via their <a href="https://indiana-kenanga-villas.com/restaurant/" target="_blank">Contact Form</a> or WhatsApp +62 859 3506 5565. They offer free pickup/drop-off.</p>
+      <p style="margin-bottom:8px"><b>Dinner — <a href="https://www.thelembongantraveller.com/portfolio_page/la-bianca-nusa-lembongan/" target="_blank">La Bianca</a> (the birthday dinner).</b> Beachfront, candlelit, 180° sunset view. <b>Ask for a front-row table on the sand/terrace, sunset side</b> — it gets very busy before sunset so book ahead and request the front. For a cake/decorations, use their <b>web booking form's "Special Requirements" (Birthday)</b> field, not WhatsApp (WhatsApp special requests have been handled poorly), and get it confirmed in writing.</p>
+      <p style="font-size:.8rem;color:var(--muted)">Tip: two different venues for lunch vs dinner keeps the evening distinct and special.</p>
+    </div>
+  </div>
+  <script>
+  (function(){
+    var btn=document.getElementById('bdayBtn'),pin=document.getElementById('bdayPin'),err=document.getElementById('bdayErr');
+    function tryUnlock(){
+      if(pin.value==='4749'){
+        document.getElementById('bdayLock').style.display='none';
+        document.getElementById('bdayContent').style.display='block';
+        err.textContent='';
+      }else{ err.textContent='Incorrect PIN'; pin.value=''; }
+    }
+    btn.addEventListener('click',tryUnlock);
+    pin.addEventListener('keydown',function(e){ if(e.key==='Enter') tryUnlock(); });
+  })();
+  </script>
+  <div class="book"><span class="ico">📋</span><b>Book ahead:</b> Message Lembongan Beach Club to <b>add Indie</b> (currently 4 guests) and <b>confirm the 22nd boat + included airport shuttle time</b>.</div>
+</section>
+
+<!-- ============ TUE 21 ============ -->
+<section class="day">
+  <div class="dayhead"><span class="daynum">Tue 21 Jul</span><h2>Last full day · Lembongan Beach Club</h2></div>
+  <div class="temp">🌡️ <b>~27–28°C</b> day / ~24°C night · another warm, dry beach day</div>
+  <table class="tl">
+    <tr><td class="t">8:30am</td><td>Breakfast (included)</td></tr>
+    <tr><td class="t">Morning</td><td>Final adventure or flop</td></tr>
+    <tr><td class="t">Afternoon</td><td>Pool / last massages</td></tr>
+    <tr><td class="t">Evening</td><td>Farewell dinner; pack tonight</td></tr>
+  </table>
+  <div class="block">
+    <h3>⚠️ Options</h3>
+    <ul class="opts">
+      <li>Second snorkel run (chase mantas if you skipped them, or more turtles/reef)</li>
+      <li>More Ceningan cliff jumps / surf</li>
+      <li>Pure flop — beach, pool, books, sunset massage</li>
+      <li>Souvenir shopping in Jungutbatu village</li>
+    </ul>
+  </div>
+  <div class="block">
+    <h3>Dinner</h3>
+    <ul class="opts">
+      <li class="star"><span class="tag s">⭐</span>Beachfront BBQ seafood warung — fresh fish over coconut coals, plastic tables, stars; no booking</li>
+      <li class="star"><span class="tag s">⭐</span><a href="https://www.google.com/maps/search/Hai+Ri+Zen+Lembongan" target="_blank">Hai Ri Zen</a> — bamboo, beachfront, beautiful — a strong last-night option</li>
+    </ul>
+  </div>
+  <div class="book"><span class="ico">📋</span><b>Confirm:</b> Tomorrow's 9:45am shuttle to the Rocky office (or the resort's included boat time).</div>
+</section>
+
+<!-- ============ WED 22 ============ -->
+<section class="day">
+  <div class="dayhead"><span class="daynum">Wed 22 Jul</span><h2>Nusa Lembongan → Home</h2></div>
+  <div class="temp">🌡️ Lembongan/Sanur <b>~27°C</b> day · landing Auckland pre-dawn ~9–11°C — warm layers in carry-on</div>
+  <table class="tl">
+    <tr><td class="t">~8:00am</td><td>Relaxed breakfast, final pack</td></tr>
+    <tr><td class="t">9:45am</td><td>Shuttle to <a href="https://www.rockyfastcruise.com/" target="_blank">Rocky Fast Cruise</a> office (check-in 1 hr before 11am)</td></tr>
+    <tr class="hl"><td class="t">11:00am</td><td><a href="https://www.rockyfastcruise.com/" target="_blank">Rocky</a> boat departs Lembongan — mid-morning, still in the calmer window; 💊 seasickness pills 30–60 min before (short but exposed crossing can be bouncy)</td></tr>
+    <tr><td class="t">11:40am</td><td>Arrive Sanur — beachfront lunch</td></tr>
+    <tr><td class="t">1:15–1:30pm</td><td>Sanur→DPS (use resort's included shuttle if timing suits)</td></tr>
+    <tr><td class="t">2:15–2:50pm</td><td>At DPS, 3 hrs before flight</td></tr>
+    <tr class="hl"><td class="t">5:50pm</td><td><b>NZ291 departs</b></td></tr>
+    <tr><td class="t">5:30am Thu NZT</td><td>Land Auckland — collect your car from <b>AKL Transport Hub Valet</b> (booking 7GZYG, exit by 6:30am), then drive home</td></tr>
+  </table>
+  <div class="book"><span class="ico">📋</span><b>Book ahead:</b> Confirm departure transfer (resort shuttle vs Rocky). <span style="color:var(--muted)">Your car's already parked at AKL Valet (7GZYG) — just collect &amp; drive home.</span></div>
+</section>
+
+</main>
+
+<!-- ============ CHECKLIST ============ -->
+<section class="open"><div class="wrap">
+  <h2>✅ Your master checklist — in priority order</h2>
+  <p class="lead">Tick as you go (checks save while this page stays open). Grouped by when to do it — work top to bottom. Trip departs Mon 13 July 2026.</p>
+
+  <div class="band">
+    <div class="band-h"><span class="ttl">① Do now — the long-lead &amp; fills-up-fast ones</span><span class="due soon">4+ weeks out</span></div>
+    <div class="chk"><input type="checkbox" id="c1"><label for="c1"><b>Check all 5 passports</b> — valid 6+ months beyond 22 July 2026, with a blank page each. Renew now if any are tight.<span class="mini">The single thing that can derail everything if left late.</span></label></div>
+    <div class="chk"><input type="checkbox" id="c2"><label for="c2"><b>Book Waterbom tickets + gazebo</b> (Thu 16) — <a href="https://waterbom-bali.com/" target="_blank">waterbom-bali.com</a>; gazebos sell out weeks ahead in July. Try Klook/GetYourGuide or email reservations if sold out.</label></div>
+    <div class="chk done2"><input type="checkbox" id="c3" checked><label for="c3"><b>Reserve Bambu</b> (Tue 14 dinner) — booked ✓ 6:15pm</label></div>
+    <div class="chk done2"><input type="checkbox" id="c4" checked><label for="c4"><b>Reserve Mama San</b> (Mon 13 dinner) — booked ✓ 7:45pm</label></div>
+    <div class="chk"><input type="checkbox" id="c5"><label for="c5"><b>Book the two private bookings for the 20th</b> 🎁 — see the hidden panel on the 20th for venues, tables &amp; times.</label></div>
+    <div class="chk done2"><input type="checkbox" id="c6" checked><label for="c6"><b>Email Optimum Bali (villa manager)</b> — sent ✓ (airport pickup, one-van request, breakfasts Tue 14 &amp; Fri 17, massages Tue 14 ~8:45am ×3, Sanur transfer). Awaiting confirmation &amp; prices.</label></div>
+    <div class="chk"><input type="checkbox" id="c7"><label for="c7"><b>Sort travel insurance</b> for all 5 — recommend <a href="https://www.scti.co.nz/" target="_blank">Southern Cross (SCTI) International Comprehensive</a> (kids free on adult policy); <b>confirm quad-bike &amp; snorkelling are covered</b>. Compare via <a href="https://www.comparetravelinsurance.co.nz/" target="_blank">comparetravelinsurance.co.nz</a>.</label></div>
+  </div>
+
+  <div class="band">
+    <div class="band-h"><span class="ttl">② A few weeks out — activities &amp; key tables</span><span class="due">2–3 weeks out</span></div>
+    <div class="chk done2"><input type="checkbox" id="c8" checked><label for="c8"><b>Book Bali Zoo orangutan breakfast</b> (Wed 15) — booked &amp; paid ✓ 6:30am pickup + drop-off included</label></div>
+    <div class="chk done2"><input type="checkbox" id="c9" checked><label for="c9"><b>Book ATV quad-bike tour</b> (Wed 15) — booked ✓ 11:00am, ATV Ubud Adventure (3 single + 1 tandem); ask zoo driver to drop at the ATV base.</label></div>
+    <div class="chk done2"><input type="checkbox" id="c10" checked><label for="c10"><b>Reserve Omma Day Club daybed</b> (Wed 15) — booked ✓ 1:00pm, 2 daybeds, ref KQ654C</label></div>
+    <div class="chk"><input type="checkbox" id="c11"><label for="c11"><b>Message Morin Resort</b> — give arrival time (~1:30pm, 17th) — <a href="https://www.morinresort.com/" target="_blank">morinresort.com</a> / WhatsApp +62 811 3800 8432</label></div>
+    <div class="chk"><input type="checkbox" id="c12"><label for="c12"><b>Message Lembongan Beach Club</b> — add Indie to the booking (currently 4 guests) &amp; confirm the 22nd boat + included Sanur→airport shuttle time — <a href="https://lembonganbeachclubandresort.com/" target="_blank">lembonganbeachclubandresort.com</a> / WhatsApp +62 811 397 1862 · reception +62 821 4642 5043</label></div>
+    <div class="chk"><input type="checkbox" id="c13"><label for="c13"><b>Confirm remaining transfers</b> — Seminyak→Sanur boat office (17th, ~10:15am) via the villa; Sanur→DPS home (22nd). <span style="opacity:.7">AKL parking sorted (7GZYG).</span></label></div>
+    <div class="chk"><input type="checkbox" id="c14"><label for="c14"><b>Optionally pre-book other Seminyak dinners</b> (Wed/Thu/Fri) if you want certainty — Mérah Putih, BARA Bistro, La Lucciola, The Long Table, Ji at Tugu (all in the contacts list below).</label></div>
+  </div>
+
+  <div class="band">
+    <div class="band-h"><span class="ttl">③ ~1 week out — the online entry admin</span><span class="due">5–7 days out</span></div>
+    <div class="chk"><input type="checkbox" id="c15"><label for="c15"><b>Apply for the e-Visa on Arrival</b> for all 5 — Indonesia's official <a href="https://evisa.imigrasi.go.id/" target="_blank">evisa.imigrasi.go.id</a> (avoids airport queues).</label></div>
+    <div class="chk"><input type="checkbox" id="c16"><label for="c16"><b>Pay the Bali tourist levy</b> (IDR 150k pp) — official <a href="https://lovebali.baliprov.go.id/" target="_blank">lovebali.baliprov.go.id</a>; save the QR codes.</label></div>
+    <div class="chk done2"><input type="checkbox" id="c17" checked><label for="c17"><b>Snorkel charter</b> (Sun 19) — booked ✓ Captain Yin Yang, 10am, 5 pax, 2.2M IDR. Confirm pickup from Morin + deposit.</label></div>
+    <div class="chk"><input type="checkbox" id="c18"><label for="c18"><b>Buy seasickness pills</b> + any regular meds, sunscreen (reef-safe), after-sun.</label></div>
+  </div>
+
+  <div class="band">
+    <div class="band-h"><span class="ttl">④ 1–3 days before flying</span><span class="due soon">just before</span></div>
+    <div class="chk"><input type="checkbox" id="c19"><label for="c19"><b>Complete the e-Customs Declaration</b> — <a href="https://ecd.beacukai.go.id/" target="_blank">ecd.beacukai.go.id</a> (valid within 3 days of arrival; do it for the family).</label></div>
+    <div class="chk"><input type="checkbox" id="c20"><label for="c20"><b>Confirm Optimum Bali airport pickup</b> details (driver, meeting point) for the 4:20pm landing on the 13th.</label></div>
+    <div class="chk"><input type="checkbox" id="c21"><label for="c21"><b>Sort money</b> — some cash/cards with no FX fees; tell your bank you're travelling.</label></div>
+    <div class="chk"><input type="checkbox" id="c22"><label for="c22"><b>Download offline maps + WhatsApp</b> (every operator uses it); consider an eSIM for data.</label></div>
+    <div class="chk"><input type="checkbox" id="c23"><label for="c23"><b>Print/screenshot everything</b> — boat vouchers (Kai Koa LJHF-080326, Rocky RFC260311OAVP), hotel confirmations, e-VOA, levy QR, customs QR.</label></div>
+  </div>
+
+  <div class="band">
+    <div class="band-h"><span class="ttl">⑤ On the ground — quick wins</span><span class="due chill">in Bali</span></div>
+    <div class="chk"><input type="checkbox" id="c24"><label for="c24"><b>Pre-order villa breakfasts</b> the night before each — Tue 14 &amp; Fri 17 only (~8am).</label></div>
+    <div class="chk"><input type="checkbox" id="c25"><label for="c25"><b>Book golf cart / scooters</b> on arrival at Morin (17th).</label></div>
+    <div class="chk"><input type="checkbox" id="c28"><label for="c28"><b>Arrange the Ubud-day driver</b> (Wed 15) — the zoo picks you up, but you need a private driver for the rest: collect from the ATV base ~12:30pm → Omma Day Club (wait) → back to Seminyak ~4pm. Book a full-day driver via Villa Zayya/Optimum Bali a day or two ahead (~IDR 700–900k).</label></div>
+    <div class="chk"><input type="checkbox" id="c29"><label for="c29"><b>Book a reliable Sanur→airport driver</b> (Wed 22) — after the Rocky boat lands ~11:40am, transfer to DPS (~30–45 min) for the 5:50pm flight. Pre-book a known service (or confirm Lembongan Beach Club's included shuttle covers it) — don't rely on a pier taxi on departure day.</label></div>
+    <div class="chk"><input type="checkbox" id="c26"><label for="c26"><b>Book island dinners</b> a day or two ahead — Thai Pantry, The Deck, Hai Ri Zen, Ohana's.</label></div>
+    <div class="chk"><input type="checkbox" id="c27"><label for="c27"><b>Confirm the 22nd departure</b> — Rocky boat (or resort's included boat) + Sanur→airport shuttle the day before.</label></div>
+  </div>
+
+  <div class="band">
+    <div class="band-h"><span class="ttl">Already sorted ✓</span><span class="due chill">done</span></div>
+    <div class="chk done2"><input type="checkbox" id="d1" checked disabled><label for="d1">Flights (NZ290/291), all accommodation (Villa Zayya, Morin, Lembongan Beach Club), Bali Zoo breakfast (paid, 6:30am pickup), Kai Koa boat over (12:30pm, paid), Rocky boat home (paid), snorkel plan, all dining picks chosen.</label></div>
+  </div>
+</div></section>
+
+<!-- ============ BOOK IT ALL ============ -->
+<section class="booklist"><div class="wrap">
+  <h2>📒 Book it all — contacts &amp; links</h2>
+  <p class="lead">Everything that needs reserving, with where to do it. The big-ticket / fills-up-fast ones are worth doing 2–4 weeks ahead.</p>
+
+  <h3>Restaurants — Seminyak</h3>
+  <div class="brow"><span class="when">Mon 13 · 7:45pm</span><span class="nm">Mama San <span style="color:var(--coral)">— booked ✓</span></span><span class="ct">Jl. Raya Kerobokan 135 · <a href="https://mamasanbali.com/" target="_blank">mamasanbali.com</a></span></div>
+  <div class="brow"><span class="when">Tue 14 · ~12:30pm</span><span class="nm">Lunch — Sisterfields / Milk &amp; Madu</span><span class="ct">Walk-in (go before/after the noon rush, or message same morning for a table). <a href="https://www.sisterfieldsbali.com/" target="_blank">sisterfieldsbali.com</a> · <a href="https://www.instagram.com/milkandmadu/" target="_blank">@milkandmadu</a></span></div>
+  <div class="brow"><span class="when">Tue 14 · 6:15pm</span><span class="nm">Bambu <span style="color:var(--coral)">— booked ✓</span></span><span class="ct">Jl. Petitenget · <a href="https://bambubali.com/" target="_blank">bambubali.com</a></span></div>
+  <div class="brow"><span class="when">Wed/Thu/Fri · ~6–7pm</span><span class="nm">Optional other dinners</span><span class="ct">Book ~1–2 wks ahead if you want certainty: <a href="https://www.merahputih-bali.com/" target="_blank">Mérah Putih</a> · <a href="https://www.instagram.com/barabistrobali/" target="_blank">BARA Bistro</a> · <a href="https://thelongtablebali.com/" target="_blank">The Long Table</a> · <a href="https://www.lalucciola-bali.com/" target="_blank">La Lucciola</a> · <a href="https://www.tuguhotels.com/hotels/bali/hotel-tugu-bali/dine/" target="_blank">Ji at Tugu</a></span></div>
+
+  <h3>Restaurants — Nusa Lembongan</h3>
+  <div class="brow"><span class="when">island nights · ~6:30–7pm</span><span class="nm">The Deck · Hai Ri Zen · Thai Pantry · Ohana's</span><span class="ct">Book a day or two ahead once on the island: <a href="https://www.thedecklembongan.com/" target="_blank">thedecklembongan.com</a> · <a href="https://www.instagram.com/thaipantrylembongan/" target="_blank">@thaipantrylembongan</a> · <a href="https://www.ohanaslembongan.com/" target="_blank">ohanaslembongan.com</a></span></div>
+
+  <h3>Activities &amp; days out</h3>
+  <div class="brow"><span class="when">Wed 15 · 6:30am pickup</span><span class="nm">Bali Zoo — orangutan breakfast <span style="color:var(--coral)">— booked ✓</span></span><span class="ct">4 adults + Indie, paid IDR 4,338,000. Pickup &amp; drop-off from Villa Zayya included. Ticket emailed. Reservations: reservation@bali-zoo.com / +62 361 294 357 (booked via their official site) · <a href="https://bali-zoo.com/package/breakfast-with-orangutan/" target="_blank">bali-zoo.com</a></span></div>
+  <div class="brow"><span class="when">Wed 15 · 11:00am</span><span class="nm">ATV Ubud Adventure <span style="color:var(--coral)">— booked ✓</span></span><span class="ct">5 people (3 single + 1 tandem). Jl. Raya Singapadu No.10, Singapadu Kaler, Kec. Sukawati, Gianyar · WhatsApp +62 878-7706-6948 · <a href="https://atvubudadventure.com/" target="_blank">atvubudadventure.com</a></span></div>
+  <div class="brow"><span class="when">Wed 15 · 1:00pm</span><span class="nm">Omma Day Club <span style="color:var(--coral)">— booked ✓</span></span><span class="ct">2 daybeds side by side (for all 5), ref KQ654C. <a href="https://ommabali.com/" target="_blank">ommabali.com</a></span></div>
+  <div class="brow"><span class="when">Thu 16 · 9am gates</span><span class="nm">Waterbom + gazebo</span><span class="ct">Tickets &amp; gazebo: <a href="https://waterbom-bali.com/" target="_blank">waterbom-bali.com</a> · also try <a href="https://www.klook.com/en-US/activity/1736-waterbom-bali-kuta/" target="_blank">Klook</a> / <a href="https://www.getyourguide.com/" target="_blank">GetYourGuide</a> for cabanas if sold out</span></div>
+  <div class="brow"><span class="when">Sun 19 · 10:00am</span><span class="nm">Captain Yin Yang — private snorkel charter <span style="color:var(--coral)">— booked ✓</span></span><span class="ct">5 pax, 2.2M IDR (~NZ$215). WhatsApp +62 813 5335 5215 (Captain Komang) · calm spots (Crystal Bay, Mangrove Point, Gamat Bay), manta only if calm · gear, life vests, GoPro incl. · <a href="https://www.captainyinyang-lembongan.com/" target="_blank">captainyinyang-lembongan.com</a></span></div>
+
+  <h3>In-villa (arrange with Optimum Bali)</h3>
+  <div class="brow"><span class="when">Tue 14 · 8:45am</span><span class="nm">In-villa massages ×3</span><span class="ct">Kayne, Nicole &amp; Lily, 60 min each (after breakfast). Arranged via Optimum Bali — info@optimumbali.com / WhatsApp +62 853 3800 2448</span></div>
+  <div class="brow"><span class="when">Tue 14 &amp; Fri 17 · ~8am</span><span class="nm">Villa breakfasts</span><span class="ct">Pre-order the night before each (free prep; groceries at cost). Tue 14 &amp; Fri 17 only. Same contact as above</span></div>
+
+  <h3>Boats, transfers &amp; stays</h3>
+  <div class="brow"><span class="when">Mon 13 · 4:20pm landing</span><span class="nm">Airport pickup (DPS→Seminyak)</span><span class="ct">Arrange via Optimum Bali for 5 + luggage; meet at arrivals after NZ290</span></div>
+  <div class="brow"><span class="when">Fri 17 · 12:30pm boat</span><span class="nm">Kai Koa fast boat <span style="color:var(--coral)">— paid ✓</span></span><span class="ct">Sanur→Lembongan, 5 seats, order LJHF-080326. Office check-in ~11:30am (leave villa ~10:15am), Jl. Pantai Matahari Terbit, Sanur. Contact: admin@kaikoaindonesia.com (no public WhatsApp — enquiries via email/website) · <a href="https://www.kaikoaindonesia.com/" target="_blank">kaikoaindonesia.com</a></span></div>
+  <div class="brow"><span class="when">Wed 22 · 11:00am boat</span><span class="nm">Rocky Fast Cruise (home) <span style="color:var(--coral)">— paid ✓</span></span><span class="ct">Lembongan→Sanur, check-in 10am, ref RFC260311OAVP · <a href="https://www.rockyfastcruise.com/" target="_blank">rockyfastcruise.com</a> · WhatsApp +62 813 3909 9963</span></div>
+  <div class="brow"><span class="when">Fri 17 · ~10:15am / Wed 22 · ~1:15pm</span><span class="nm">Other transfers</span><span class="ct">Seminyak→Sanur (17th) via Optimum Bali; Sanur→DPS (22nd) — check if Lembongan Beach Club's included shuttle covers it</span></div>
+  <div class="brow"><span class="when">Mon 13 7:45am → Thu 23 6:30am</span><span class="nm">AKL Airport parking <span style="color:var(--coral)">— booked ✓</span></span><span class="ct">Transport Hub, Mobility Valet Parking Permit, booking 7GZYG, $177. Drop your own car at the Transport Hub Valet on the 13th; collect it on the 23rd.</span></div>
+  <div class="brow"><span class="when">villa manager</span><span class="nm">Optimum Bali (Villa Zayya)</span><span class="ct">info@optimumbali.com · WhatsApp +62 853 3800 2448 (Indri) · arranges pickup, breakfasts, massages, scooters</span></div>
+  <div class="brow"><span class="when">villa staff</span><span class="nm">Mrs. Wayan — housekeeper (cooking &amp; cleaning)</span><span class="ct">+62 852-3700-1112 · handles breakfast prep &amp; grocery shopping at Villa Zayya — confirm each breakfast with her the day before. Villa emergency line: +62 822 3685 2696</span></div>
+  <div class="brow"><span class="when">stays</span><span class="nm">Villa Zayya · Morin · Lembongan Beach Club</span><span class="ct"><a href="https://optimumbali.com/villa-bali/rental/4-bedrooms-for-rent/villa-zayya-seminyak-oberoi/" target="_blank">Villa Zayya</a> · <a href="https://www.morinresort.com/" target="_blank">morinresort.com</a> · <a href="https://lembonganbeachclubandresort.com/" target="_blank">lembonganbeachclubandresort.com</a></span></div>
+
+  <h3>Admin &amp; insurance</h3>
+  <div class="brow"><span class="when">do now</span><span class="nm">Travel insurance ×5</span><span class="ct"><b>Recommended: Southern Cross (SCTI) International Comprehensive</b> — kids covered free on the adult policy, unlimited medical, strong cancellation. Compare with Cover-More &amp; AA. <b>Confirm the quad-bike &amp; snorkelling are covered.</b> Quote: <a href="https://www.scti.co.nz/" target="_blank">scti.co.nz</a> · compare: <a href="https://www.comparetravelinsurance.co.nz/" target="_blank">comparetravelinsurance.co.nz</a></span></div>
+  <div class="brow"><span class="when">~1 wk out</span><span class="nm">Entry admin ×5</span><span class="ct">e-Visa on Arrival <a href="https://evisa.imigrasi.go.id/" target="_blank">evisa.imigrasi.go.id</a> · Bali tourist levy <a href="https://lovebali.baliprov.go.id/" target="_blank">lovebali.baliprov.go.id</a> · e-Customs (within 3 days) <a href="https://ecd.beacukai.go.id/" target="_blank">ecd.beacukai.go.id</a></span></div>
+  <div class="brow"><span class="when">Mon 20</span><span class="nm">🎁 Two private bookings <span style="color:var(--coral)">— in progress</span></span><span class="ct">(Kayne's — see the hidden panel on the 20th for venues, table requests &amp; times)</span></div>
+</div></section>
+
+<footer>
+  Munro / Roebeck family · Bali · 13–22 July 2026 · prepared as a living plan — details to be locked as bookings confirm
+</footer>
+
+<script>
+(function(){
+  try{
+    var boxes = document.querySelectorAll('.chk input[type=checkbox]:not([disabled])');
+    boxes.forEach(function(b){
+      var key = 'bali-'+b.id;
+      var saved = localStorage.getItem(key);
+      if(saved==='1' || (saved===null && b.checked)){ b.checked = true; b.closest('.chk').classList.add('done2'); }
+      b.addEventListener('change', function(){
+        localStorage.setItem(key, b.checked?'1':'0');
+        b.closest('.chk').classList.toggle('done2', b.checked);
+      });
+    });
+  }catch(e){}
+})();
+</script>
+</body>
+</html>
